@@ -147,8 +147,8 @@ docker compose up
 
 Эта команда запустит все контейнеры, описанные в файле `docker-compose.yml`. После успешного запуска бот будет готов к работе.
 
-## Лицензия
-Этот проект лицензирован под [MIT License](./LICENSE).
+## License
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
