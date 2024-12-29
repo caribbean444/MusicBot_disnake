@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 MusicBot_Disnake
+Copyright (c) 2024 caribbean444
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,9 +22,15 @@ SOFTWARE.
 
 ---
 
-This project includes third-party libraries, each of which is subject to its own license.  
-Licenses for third-party libraries can be found in the `licenses/` directory.  
-Below is a list of included libraries and their licenses:
+## Disclaimer
+
+This project is provided for educational purposes only. The author of the code is not responsible for copyright violations or misuse of third-party services, such as YouTube, by third parties.
+
+MusicBot_disnake uses yt-dlp to retrieve streams and the YouTube API for metadata (track titles and descriptions). Users must ensure that their use of the bot complies with applicable laws and platform terms of use.
+
+By using this project, you agree that the author is released from any responsibility for potential consequences of its use.
+
+This project includes the following third-party libraries with their respective licenses:
 
 - `disnake` (MIT License)
 - `requests` (Apache License, Version 2.0)
