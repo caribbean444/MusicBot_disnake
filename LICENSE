@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 MusicBot_Disnake
+Copyright (c) 2024 caribben444
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,23 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This project includes third-party libraries, each of which is subject to its own license.  
-Licenses for third-party libraries can be found in the `licenses/` directory.  
-Below is a list of included libraries and their licenses:
-
-- `disnake` (MIT License)
-- `requests` (Apache License, Version 2.0)
-- `pytube` (MIT License)
-- `yt-dlp` (Unlicense)
-- `requests-html` (MIT License)
-- `google-api-python-client` (Apache License, Version 2.0)
-- `urllib3` (MIT License)
-- `python-dotenv` (BSD-3-Clause License)
-- `pynacl` (Apache License, Version 2.0)
-- `colorlog` (MIT License)
-
-You may obtain a copy of the Apache License, Version 2.0 at:
-    http://www.apache.org/licenses/LICENSE-2.0

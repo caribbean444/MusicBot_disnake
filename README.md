@@ -80,7 +80,7 @@ MusicBot\_disnake - музыкальный бот для Discord, поддерж
    sudo systemctl enable docker
    ```
 5. Установите плагин Docker Compose:
-   ```
+   ```bash
    sudo yum install -y docker-compose-plugin
    ```
 6. Проверьте работу Docker:
@@ -146,3 +146,40 @@ docker compose up
 ```
 
 Эта команда запустит все контейнеры, описанные в файле `docker-compose.yml`. После успешного запуска бот будет готов к работе.
+
+## Лицензия
+Этот проект лицензирован под [MIT License](./LICENSE).
+
+---
+
+### Disclaimer
+
+This project is provided for educational purposes only. The author of the code is not responsible for copyright violations or misuse of third-party services, such as YouTube, by third parties.
+
+MusicBot_disnake uses yt-dlp to retrieve streams and the YouTube API for metadata (track titles and descriptions). Users must ensure that their use of the bot complies with applicable laws and platform terms of use.
+
+By using this project, you agree that the author is released from any responsibility for potential consequences of its use.
+
+---
+
+This project includes the following third-party libraries with their respective licenses:
+
+- `disnake` (MIT License)
+- `requests` (Apache License, Version 2.0)
+- `pytube` (MIT License)
+- `yt-dlp` (Unlicense)
+- `requests-html` (MIT License)
+- `google-api-python-client` (Apache License, Version 2.0)
+- `urllib3` (MIT License)
+- `python-dotenv` (BSD-3-Clause License)
+- `pynacl` (Apache License, Version 2.0)
+- `colorlog` (MIT License)
+
+You may obtain a copy of the Apache License, Version 2.0 at:
+    http://www.apache.org/licenses/LICENSE-2.0
+
+You may obtain a copy of the Unlicense at:
+   https://unlicense.org/
+
+You may obtain a copy of the BSD-3-Clause Licensee at:
+   https://opensource.org/licenses/BSD-3-Clause
