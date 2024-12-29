@@ -41,8 +41,6 @@ RUN pip install --upgrade certifi
 
 
 # Указываем команду для запуска контейнера
-#CMD ["sh", "-c", "openvpn --config /etc/openvpn/client/client.ovpn --daemon && python -u ./main.py"]
-# CMD ["sh", "-c", "./entrypoint.sh && openvpn --config /etc/openvpn/client/client.ovpn --daemon && while ! ip a | grep -q tun0; do sleep 1; done && python -u ./main.py"]
 CMD ["sh", "-c", "./entrypoint.sh && ([ -n \"$OPENVPN_LOGIN\" ] && [ -n \"$OPENVPN_PASSWORD\" ] && openvpn --config /etc/openvpn/client/client.ovpn --auth-user-pass /etc/openvpn/auth.txt --daemon && while ! ip a | grep -q tun0; do sleep 1; done || echo 'OpenVPN не используется') && python -u ./main.py"]
 
 
