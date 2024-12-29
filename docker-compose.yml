@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    container_name: bot
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    network_mode: "bridge"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"  # Ограничение в 4 ядра
+    environment:
+      - OPENVPN_LOGIN=${OPENVPN_LOGIN}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - OMP_NUM_THREADS=4
+      - ENV OPENBLAS_NUM_THREADS=4
+      - BOT_OWNER_IDS=${BOT_OWNER_IDS}
+      - LOG_LEVEL=${LOG_LEVEL}
+    volumes:
+      - ./openvpn:/openvpncfg
+      - ./data:/app/data
