@@ -209,7 +209,7 @@ class CustomVoiceClient(disnake.VoiceClient):
         return True
 
 @bot.command()
-async def ignor(ctx,channel: disnake.TextChannel):
+async def ignore(ctx,channel: disnake.TextChannel):
     """Канал добавлен в игнорируемые"""
     channel_id = channel.id
     list_channal_no.append(channel_id)
@@ -218,7 +218,7 @@ async def ignor(ctx,channel: disnake.TextChannel):
 
 
 @bot.command()
-async def noignor(ctx,channel: disnake.TextChannel):
+async def noignore(ctx,channel: disnake.TextChannel):
     """Канал исключен из игнорируемых"""
     channel_id = channel.id
     list_channal_no.remove(channel_id)

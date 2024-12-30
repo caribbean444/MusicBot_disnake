@@ -1,13 +1,41 @@
 # MusicBot\_disnake
-
+![License](https://img.shields.io/github/license/caribbean444/MusicBot_disnake)
+![Version](https://img.shields.io/github/v/release/caribbean444/MusicBot_disnake)
+![Stars](https://img.shields.io/github/stars/caribbean444/MusicBot_disnake?style=social)
+![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
+![Discord API](https://img.shields.io/badge/Discord-API-green)
+![Docker Ready](https://img.shields.io/badge/Docker-ready-blue)
+![Maintained](https://img.shields.io/maintenance/yes/2024)
+---
 MusicBot\_disnake - музыкальный бот для Discord, поддерживающий использование OpenVPN.
+
+## Содержание
+1. [Описание](#MusicBot_disnake)
+2. [Пример использования](#Пример-использования)
+3. [Требования к железу](#Требования-к-железу)
+4. [Описание команд](#Описание-команд)
+5. [Установка](#Установка)
+6. [Лицензия](#License)
+7. [Дисклеймер](#Disclaimer)
+
+
+## Пример использования
+### Интерфейс бота в чате Discord    
+![alt text](/images/example.png)
+
+**`▶️`** - Включение плеера, если он был поставлен на паузу.    
+**`⏸️`** - Пауза плеера.    
+**`⏹️`** - Остановка плеера с очисткой очереди треков.    
+**`⏩`** - Пропуск текущего трека.    
+**`📶`** - Отображение очереди треков в виде списка с возможностью выбора трека. При выборе трека из списка все треки до выбранного пропускаются и удаляются из очереди.
+ 
 
 ## Требования к железу
 
 Для корректной работы музыкального бота MusicBot_disnake требуются минимальные аппаратные характеристики сервера:
 
 - **Процессор:** 2 ядра с тактовой частотой 2.0 ГГц или выше.
-- **Оперативная память:** минимум 0.5 ГБ. (Рекомундуется 1 ГБ.)
+- **Оперативная память:** минимум 0.5 ГБ. (Рекомендуется 1 ГБ.)
 - **Место на диске:** минимум 5 ГБ свободного пространства для кэша и временных файлов.
 - **Сетевое соединение:** стабильный доступ в интернет с минимальной задержкой и пропускной способностью 5 Мбит/с.
 
@@ -20,14 +48,14 @@ MusicBot\_disnake - музыкальный бот для Discord, поддерж
 - **`.play <URL>`**  
   Добавляет трек в очередь для воспроизведения. Поддерживаются ссылки на YouTube и YouTube Music.
 
-- **`.ignor <#Текстовый канал>`**  
-  Добавлет текстовый канал в список каналов, игнорируемых ботом.
+- **`.ignore <#Текстовый канал>`**  
+  Добавляет текстовый канал в список каналов, игнорируемых ботом.
 
-- **`.noignor <#Текстовый канал>`**  
-  Удаляет тектовый канал из списка каналов, игнорируемых ботом.
+- **`.noignore <#Текстовый канал>`**  
+  Удаляет текстовый канал из списка каналов, игнорируемых ботом.
 
 - **`.time <seconds>`**  
-  Изменение время бездействия бота. По умолчанию 5 минут.
+  Изменение времени бездействия бота. По умолчанию 5 минут.
 
 - **`.clear`**  
   Очищает очередь треков.
@@ -235,7 +263,7 @@ docker compose up
 
 **Ограничения:**
    - Бот не поддерживает прямое воспроизведение музыки из файлов (локальных или облачных) — только из YouTube и YouTube Music.
-   - Бот поддерживает работу только на одно сервере одновременно.
+   - Бот поддерживает работу только на одном сервере одновременно.
 
 
 ## License
@@ -255,16 +283,16 @@ By using this project, you agree that the author is released from any responsibi
 
 This project includes the following third-party libraries with their respective licenses:
 
-- `disnake` (MIT License)
-- `requests` (Apache License, Version 2.0)
-- `pytube` (MIT License)
-- `yt-dlp` (Unlicense)
-- `requests-html` (MIT License)
-- `google-api-python-client` (Apache License, Version 2.0)
-- `urllib3` (MIT License)
-- `python-dotenv` (BSD-3-Clause License)
-- `pynacl` (Apache License, Version 2.0)
-- `colorlog` (MIT License)
+- [`disnake`](https://github.com/DisnakeDev/disnake) (MIT License)
+- [`requests`](https://github.com/psf/requests) (Apache License, Version 2.0)
+- [`pytube`](https://github.com/pytube/pytube) (MIT License)
+- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (Unlicense)
+- [`requests-html`](https://github.com/psf/requests-html) (MIT License)
+- [`google-api-python-client`](https://github.com/googleapis/google-api-python-client) (Apache License, Version 2.0)
+- [`urllib3`](https://github.com/urllib3/urllib3) (MIT License)
+- [`python-dotenv`](https://github.com/theskumar/python-dotenv) (BSD-3-Clause License)
+- [`pynacl`](https://github.com/pyca/pynacl) (Apache License, Version 2.0)
+- [`colorlog`](https://github.com/borntyping/python-colorlog) (MIT License)
 
 You may obtain a copy of the Apache License, Version 2.0 at:
     http://www.apache.org/licenses/LICENSE-2.0
