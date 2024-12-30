@@ -1,6 +1,6 @@
 # MusicBot\_disnake
-![License](https://img.shields.io/github/license/caribbean444/MusicBot_disnake)
-![Version](https://img.shields.io/github/v/release/caribbean444/MusicBot_disnake)
+![GitHub License](https://img.shields.io/github/license/caribbean444/MusicBot_disnake)
+![GitHub Release](https://img.shields.io/github/v/release/caribbean444/MusicBot_disnake)
 ![Stars](https://img.shields.io/github/stars/caribbean444/MusicBot_disnake?style=social)
 ![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)
 ![Discord API](https://img.shields.io/badge/Discord-API-green)
