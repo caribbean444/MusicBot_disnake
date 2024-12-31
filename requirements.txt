@@ -4,7 +4,7 @@ pytube==12.1.2
 yt-dlp
 requests-html==0.10.0
 google-api-python-client==2.111.0
-urllib3==2.1.0
+urllib3>=2.1.0
 python-dotenv==1.0.1
 pynacl
 colorlog
