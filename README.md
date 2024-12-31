@@ -289,7 +289,7 @@ This project includes third-party libraries, each of which is subject to its own
 - [`disnake`](https://github.com/DisnakeDev/disnake) (MIT License) ([See license](./licenses/disnake_LICENSE))
 - [`requests`](https://github.com/psf/requests) (Apache License, Version 2.0) ([See license](./licenses/requests_LICENSE), [See notice](./licenses/requests_NOTICE))
 - [`pytube`](https://github.com/pytube/pytube) (Unlicense) ([See license](./licenses/pytube_LICENSE))
-- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (Unlicense) ([See license](./licenses/yt-dlp_LICENSE))
+- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (Unlicense) ([See license](./licenses/yt_dlp_LICENSE))
 - [`requests-html`](https://github.com/psf/requests-html) (MIT License) ([See license](./licenses/requests-html_LICENSE))
 - [`google-api-python-client`](https://github.com/googleapis/google-api-python-client) (Apache License, Version 2.0) ([See license](./licenses/google-api-python-client_LICENSE))
 - [`urllib3`](https://github.com/urllib3/urllib3) (MIT License) ([See license](./licenses/urllib3_LICENSE))
