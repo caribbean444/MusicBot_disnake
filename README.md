@@ -38,6 +38,7 @@ MusicBot\_disnake - музыкальный бот для Discord, поддерж
 - **Оперативная память:** минимум 0.5 ГБ. (Рекомендуется 1 ГБ.)
 - **Место на диске:** минимум 5 ГБ свободного пространства для кэша и временных файлов.
 - **Сетевое соединение:** стабильный доступ в интернет с минимальной задержкой и пропускной способностью 5 Мбит/с.
+- **Тип накопителя:** HDD или SSD (Чем быстрее, тем лучше)
 
 Рекомендуется запускать бота на сервере под управлением Linux для оптимальной производительности.
 
@@ -283,22 +284,15 @@ By using this project, you agree that the author is released from any responsibi
 
 This project includes the following third-party libraries with their respective licenses:
 
-- [`disnake`](https://github.com/DisnakeDev/disnake) (MIT License)
-- [`requests`](https://github.com/psf/requests) (Apache License, Version 2.0)
-- [`pytube`](https://github.com/pytube/pytube) (MIT License)
-- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (Unlicense)
-- [`requests-html`](https://github.com/psf/requests-html) (MIT License)
-- [`google-api-python-client`](https://github.com/googleapis/google-api-python-client) (Apache License, Version 2.0)
-- [`urllib3`](https://github.com/urllib3/urllib3) (MIT License)
-- [`python-dotenv`](https://github.com/theskumar/python-dotenv) (BSD-3-Clause License)
-- [`pynacl`](https://github.com/pyca/pynacl) (Apache License, Version 2.0)
-- [`colorlog`](https://github.com/borntyping/python-colorlog) (MIT License)
+This project includes third-party libraries, each of which is subject to its own license. The licenses and notices for these libraries can be found in the `licenses/` directory.
 
-You may obtain a copy of the Apache License, Version 2.0 at:
-    http://www.apache.org/licenses/LICENSE-2.0
-
-You may obtain a copy of the Unlicense at:
-   https://unlicense.org/
-
-You may obtain a copy of the BSD-3-Clause Licensee at:
-   https://opensource.org/licenses/BSD-3-Clause
+- [`disnake`](https://github.com/DisnakeDev/disnake) (MIT License) ([See license](./licenses/disnake_LICENSE))
+- [`requests`](https://github.com/psf/requests) (Apache License, Version 2.0) ([See license](./licenses/requests_LICENSE), [See notice](./licenses/requests_NOTICE))
+- [`pytube`](https://github.com/pytube/pytube) (Unlicense) ([See license](./licenses/pytube_LICENSE))
+- [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (Unlicense) ([See license](./licenses/yt-dlp_LICENSE))
+- [`requests-html`](https://github.com/psf/requests-html) (MIT License) ([See license](./licenses/requests-html_LICENSE))
+- [`google-api-python-client`](https://github.com/googleapis/google-api-python-client) (Apache License, Version 2.0) ([See license](./licenses/google-api-python-client_LICENSE))
+- [`urllib3`](https://github.com/urllib3/urllib3) (MIT License) ([See license](./licenses/urllib3_LICENSE))
+- [`python-dotenv`](https://github.com/theskumar/python-dotenv) (BSD-3-Clause License) ([See license](./licenses/python-dotenv_LICENSE))
+- [`pynacl`](https://github.com/pyca/pynacl) (Apache License, Version 2.0) ([See license](./licenses/pynacl_LICENSE))
+- [`colorlog`](https://github.com/borntyping/python-colorlog) (MIT License) ([See license](./licenses/python-colorlog_LICENSE))

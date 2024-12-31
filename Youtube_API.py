@@ -17,6 +17,7 @@ async def name_video(url):
             if url[i]=="?":
                 o=i
                 break
+        if o == None: o = len(url)+1
         for i in range(o+1,len(url)):
             url=url[0:i-1]
         video_id = url
