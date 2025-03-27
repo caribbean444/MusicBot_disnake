@@ -181,7 +181,8 @@ class CustomVoiceClient(disnake.VoiceClient):
 
     async def stop(self, *, force: bool = False):
         """Переопределенный stop с контролем колбэка after"""
-        self._player.after = None
+        if self._player:
+            self._player.after = None
         if asyncio.iscoroutinefunction(super().stop):
             await super().stop()  # Для асинхронных версий
         else:
@@ -217,7 +218,7 @@ class CustomVoiceClient(disnake.VoiceClient):
     
     async def potential_reconnect(self) -> bool:
         logger.debug("Перехват потенциального переподключения (custom_disconnect)...")
-        return True
+        return False
 
 @bot.command()
 async def ignore(ctx,channel: disnake.TextChannel):
