@@ -176,13 +176,24 @@ async def inactivity_timeout(ctx):
             logger.warning("Клиент не существует, либо отключен")
 
 class CustomVoiceClient(disnake.VoiceClient):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    async def stop(self, *, force: bool = False):
+        """Переопределенный stop с контролем колбэка after"""
+        self._player.after = None
+        if asyncio.iscoroutinefunction(super().stop):
+            await super().stop()  # Для асинхронных версий
+        else:
+            super().stop()  # Для синхронных версий
+
     async def disconnect(self, *, force: bool = False):
         """Отключает голосовой клиент и предотвращает автоматическое переподключение."""
         logger.info("Отключение голосового клиента (custom_disconnect)...")
         if not force and not self.is_connected():
             return
 
-        self.stop()
+        await self.stop()
         self._connected.clear()
 
         try:
@@ -313,7 +324,7 @@ class PlayerView(View):
     async def stop_button_callback(self, button, interaction):
         voice = disnake.utils.get(bot.voice_clients, guild=server)
         await clear(self.ctx)
-        voice.stop()
+        await voice.stop()
         await interaction.response.edit_message(view=self)
 
     @disnake.ui.button(style=disnake.ButtonStyle.primary, emoji="⏩")
@@ -419,11 +430,13 @@ def play_next(ctx):
 
         asyncio.run_coroutine_threadsafe(send_info(ctx,song_info), bot.loop)
         try:
+            if voice and voice.is_playing():
+                voice.stop()
             logger.info(f"Воспроизведение трека")
             voice.play(track, after=lambda e: play_next(ctx))
         except Exception as e:
             logger.error(f"Error playing track: {e}")
-            play_next(ctx)  # Переход к следующему треку
+            # play_next(ctx)  # Переход к следующему треку
         if guild_id in inactivity_timers:
             logger.debug(f"Сброс таймера")
             inactivity_timers[guild_id].cancel()
@@ -460,7 +473,7 @@ async def skip(ctx):
     global server, name_channel
     voice = disnake.utils.get(bot.voice_clients, guild=server)
     if voice and voice.is_playing():
-        voice.stop()
+        await voice.stop()
         play_next(ctx)
     else:
         await ctx.channel.send("Музыка не воспроизводится")
@@ -581,7 +594,7 @@ async def play(ctx, *, command=None):
 
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 song_info = ydl.extract_info(sourse, download=False)
-            track = disnake.FFmpegPCMAudio(song_info["url"], **FFMPEG_OPTIONS)  # **FFMPEG_OPTIONS
+            track = disnake.FFmpegPCMAudio(song_info["url"], **FFMPEG_OPTIONS)
 
             name_track = await name_video(sourse)
 
@@ -592,7 +605,7 @@ async def play(ctx, *, command=None):
                 voice.play(track, after=lambda e: play_next(ctx))
             except Exception as e:
                 logger.error(f"Error playing track: {e}")
-                play_next(ctx)  # Переход к следующему треку
+                # play_next(ctx)  # Переход к следующему треку
             #asyncio.run_coroutine_threadsafe(kick(ctx), bot.loop)
         else:
             if not playli:
